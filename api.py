@@ -48,7 +48,7 @@ def predict():
     if 'TIPO_DELITO' in label_encoders:
         # Decodificar la predicción para mostrar la clase original
         prediccion_decodificada = label_encoders['TIPO_DELITO'].inverse_transform(prediction)
-        return jsonify({'prediction': prediccion_decodificada[0]})
+        return jsonify({'Predicción crimen': prediccion_decodificada[0]})
     else:
         # Si no está disponible, devolver la predicción numérica
         return jsonify({'prediction': prediction[0]})
