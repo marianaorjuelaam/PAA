@@ -15,8 +15,6 @@ app.layout = html.Div(
         'backgroundSize': 'cover',  # Asegura que la imagen cubra toda la pantalla
         'backgroundAttachment': 'fixed',  # Hace que la imagen quede fija cuando haces scroll
         'backgroundPosition': 'center',  # Centra la imagen
-        'padding': '20px', 
-        'height': '100vh'
     },
     
     children=[
