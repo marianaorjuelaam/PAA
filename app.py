@@ -129,7 +129,16 @@ app.layout = html.Div(
             'padding': '20px', 'backgroundColor': '#fff', 'borderRadius': '15px', 'boxShadow': '0 4px 6px rgba(0,0,0,0.1)',
             'textAlign': 'center', 'marginTop': '20px', 'color': '#333', 'fontSize': '20px', 'fontWeight': '600',
             'maxWidth': '700px', 'margin': '20px auto'
-        })
+        }),
+
+        # Footer con el correo electrónico
+        html.Div(
+            children=[
+                html.P("Para más información, contáctenos a: ", style={'textAlign': 'center', 'fontSize': '16px', 'color': 'black'}),
+                html.A("reportes@pcrimenes.com", href="mailto:reportes@pcrimenes.com", style={'textAlign': 'center', 'fontSize': '16px', 'color': 'black', 'textDecoration': 'underline'})
+            ],
+            style={'textAlign': 'center', 'marginTop': '1px', 'fontSize': '16px', 'color': 'black'}
+        )
     ]
 )
 
