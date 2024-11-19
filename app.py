@@ -53,9 +53,39 @@ app.layout = html.Div(
                 dcc.Input(id='edad', type='number', value=25, style={'width': '100%', 'padding': '12px', 'borderRadius': '10px', 'border': '1px solid #B8B8B8', 'boxShadow': '0px 4px 6px rgba(0, 0, 0, 0.1)', 'fontSize': '16px'})
             ], style={'padding': '10px', 'backgroundColor': '#fff', 'borderRadius': '15px', 'boxShadow': '0 4px 6px rgba(0, 0, 0, 0.1)', 'marginBottom': '20px'}),
 
-            html.Div([
+            # Arma (con las opciones agregadas)
+            html.Div([  
                 html.Label("Arma:", style={'fontWeight': '600', 'color': '#4F4F4F', 'fontSize': '18px'}),
-                dcc.Input(id='arma', type='text', value='ARMA DE FUEGO', style={'width': '100%', 'padding': '12px', 'borderRadius': '10px', 'border': '1px solid #B8B8B8', 'boxShadow': '0px 4px 6px rgba(0, 0, 0, 0.1)', 'fontSize': '16px'})
+                dcc.Dropdown(
+                    id='arma',
+                    options=[
+                        {'label': 'SIN EMPLEO DE ARMAS', 'value': 'SIN EMPLEO DE ARMAS'},
+                        {'label': 'CONTUNDENTES', 'value': 'CONTUNDENTES'},
+                        {'label': 'ARMA BLANCA / CORTOPUNZANTE', 'value': 'ARMA BLANCA / CORTOPUNZANTE'},
+                        {'label': 'ARMA DE FUEGO', 'value': 'ARMA DE FUEGO'},
+                        {'label': 'ESCOPOLAMINA', 'value': 'ESCOPOLAMINA'},
+                        {'label': 'ESPOSAS', 'value': 'ESPOSAS'},
+                        {'label': 'NO REPORTADO', 'value': 'NO REPORTADO'},
+                        {'label': 'ARTEFACTO EXPLOSIVO/CARGA DINAMITA', 'value': 'ARTEFACTO EXPLOSIVO/CARGA DINAMITA'},
+                        {'label': 'ARTEFACTO INCENDIARIO', 'value': 'ARTEFACTO INCENDIARIO'},
+                        {'label': 'CARRO BOMBA', 'value': 'CARRO BOMBA'},
+                        {'label': 'COMBUSTIBLE', 'value': 'COMBUSTIBLE'},
+                        {'label': 'GRANADA DE FUSIL', 'value': 'GRANADA DE FUSIL'},
+                        {'label': 'GRANADA DE MANO', 'value': 'GRANADA DE MANO'},
+                        {'label': 'GRANADA DE MORTERO', 'value': 'GRANADA DE MORTERO'},
+                        {'label': 'MINA ANTIPERSONA', 'value': 'MINA ANTIPERSONA'},
+                        {'label': 'PAQUETE BOMBA', 'value': 'PAQUETE BOMBA'},
+                        {'label': 'PETARDO PLANFETARIO', 'value': 'PETARDO PLANFETARIO'},
+                        {'label': 'CARTA EXTORSIVA', 'value': 'CARTA EXTORSIVA'},
+                        {'label': 'MIXTA', 'value': 'MIXTA'},
+                        {'label': 'REDES SOCIALES', 'value': 'REDES SOCIALES'},
+                        {'label': 'NO REPORTA', 'value': 'NO REPORTA'},
+                        {'label': 'LLAMADA TELEFONICA', 'value': 'LLAMADA TELEFONICA'},
+                        {'label': 'DIRECTA', 'value': 'DIRECTA'}
+                    ],
+                    value='ARMA DE FUEGO',
+                    style={'width': '100%', 'padding': '12px', 'borderRadius': '10px', 'border': '1px solid #B8B8B8', 'boxShadow': '0px 4px 6px rgba(0, 0, 0, 0.1)', 'fontSize': '16px'}
+                )
             ], style={'padding': '10px', 'backgroundColor': '#fff', 'borderRadius': '15px', 'boxShadow': '0 4px 6px rgba(0, 0, 0, 0.1)', 'marginBottom': '20px'}),
 
             html.Div([
